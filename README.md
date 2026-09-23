@@ -9,9 +9,10 @@ self and everyday reality.
 - `index.html` — landing page
 - `appearance.html` — Appearance collage
 - `making.html` — blank Making collage workspace
-- `living.html` — blank Living collage workspace
+- `living.html` — Living collage
 - `styles.css` — all site and collage styles
-- `public/collages/appearance/` — Appearance image assets
+- `collages/appearance/` — Appearance image assets
+- `collages/living/` — Living image assets
 
 ## Run locally
 
