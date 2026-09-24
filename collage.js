@@ -18,7 +18,7 @@
       }
 
       const cluster = piece.closest(".pin-cluster");
-      if (!cluster) {
+      if (!cluster || !cluster.querySelector(".piece-reality")) {
         return;
       }
 
@@ -37,7 +37,7 @@
 
       event.preventDefault();
       const cluster = piece.closest(".pin-cluster");
-      if (!cluster) {
+      if (!cluster || !cluster.querySelector(".piece-reality")) {
         return;
       }
 
