@@ -2392,7 +2392,7 @@ footer div {
 
 .pin-cluster.is-reality .appearance-piece:not(.piece-reality),
 .pin-cluster.is-reality .living-piece:not(.piece-reality),
-.pin-cluster.is-reality .collage-note {
+.pin-cluster.is-reality .collage-note:not(.note-reality) {
   visibility: hidden;
   pointer-events: none;
 }
@@ -2400,6 +2400,15 @@ footer div {
 .pin-cluster.is-reality .piece-reality {
   visibility: visible;
   pointer-events: auto;
+}
+
+.collage-note.note-reality {
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.pin-cluster.is-reality .collage-note.note-reality {
+  visibility: visible;
 }
 
 .piece-reality-tartan {
@@ -2739,8 +2748,13 @@ footer div {
 
   .pin-cluster.is-reality .appearance-piece:not(.piece-reality),
   .pin-cluster.is-reality .living-piece:not(.piece-reality),
-  .pin-cluster.is-reality .collage-note {
+  .pin-cluster.is-reality .collage-note:not(.note-reality) {
     display: none;
+    visibility: visible;
+  }
+
+  .pin-cluster.is-reality .collage-note.note-reality {
+    display: grid;
     visibility: visible;
   }
 
@@ -3085,6 +3099,16 @@ footer div {
   grid-row: 1 / 3;
 }
 
+.living-collage .piece-reality-academic {
+  grid-column: 10 / 12;
+  grid-row: 2 / 5;
+}
+
+.living-collage .piece-reality-desk-job {
+  grid-column: 8 / 11;
+  grid-row: 4 / 7;
+}
+
 .living-mark {
   grid-column: 10 / 11;
   grid-row: 2 / 3;
@@ -3345,6 +3369,19 @@ footer div {
   top: -170%;
 }
 
+.living-collage .note-academic-victim {
+  grid-column: 9 / 11;
+  grid-row: 2 / 4;
+  transform: translate(4%, 12%) rotate(-4deg);
+}
+
+.living-collage .note-academic-victim span {
+  right: -1.1em;
+  top: .2em;
+  left: auto;
+  bottom: auto;
+}
+
 @media (max-width: 700px) {
   .collage-workspace-living {
     background:
@@ -3476,6 +3513,20 @@ footer div {
   .living-collage .piece-reality-cooking {
     grid-column: 77 / 103;
     grid-row: 1 / 16;
+  }
+
+  .living-collage .piece-reality-academic {
+    grid-column: 104 / 118;
+    grid-row: 23 / 43;
+  }
+
+  .living-collage .piece-reality-academic .piece-image {
+    object-fit: cover;
+  }
+
+  .living-collage .piece-reality-desk-job {
+    grid-column: 83 / 103;
+    grid-row: 33 / 52;
   }
 
   .living-collage .piece-jewelry-drawer {
@@ -3702,6 +3753,21 @@ footer div {
     left: .45em;
     top: -1.15em;
     right: auto;
+    bottom: auto;
+  }
+
+  .living-collage .note-academic-victim {
+    grid-column: 88 / 104;
+    grid-row: 24 / 32;
+    align-self: center;
+    justify-self: end;
+    z-index: 13;
+  }
+
+  .living-collage .note-academic-victim span {
+    right: -1.15em;
+    top: .2em;
+    left: auto;
     bottom: auto;
   }
 
