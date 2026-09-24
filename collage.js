@@ -2,6 +2,11 @@
   const canvases = document.querySelectorAll("[data-collage]");
 
   canvases.forEach((canvas) => {
+    if (canvas.dataset.collage === "making") {
+      setupMakingBlank(canvas);
+      return;
+    }
+
     canvas.querySelectorAll(".pin-cluster .appearance-piece, .pin-cluster .making-piece, .pin-cluster .living-piece").forEach((piece) => {
       piece.tabIndex = 0;
       piece.setAttribute("role", "button");
@@ -57,6 +62,76 @@
         isReality
           ? `Reality for ${name}. Click to show expectation.`
           : `Expectation for ${name}. Click to show reality.`
+      );
+    });
+  }
+
+  function setupMakingBlank(canvas) {
+    const workspace = canvas.closest(".collage-workspace-making");
+    if (!workspace) {
+      return;
+    }
+
+    canvas.querySelectorAll(".making-piece").forEach((piece) => {
+      piece.tabIndex = 0;
+      piece.setAttribute("role", "button");
+    });
+
+    setMakingBlank(workspace, canvas, false);
+
+    canvas.addEventListener("click", (event) => {
+      if (workspace.classList.contains("is-blank")) {
+        setMakingBlank(workspace, canvas, false);
+        return;
+      }
+
+      const piece = event.target.closest(".making-piece");
+      if (!piece || !canvas.contains(piece)) {
+        return;
+      }
+
+      setMakingBlank(workspace, canvas, true);
+    });
+
+    canvas.addEventListener("keydown", (event) => {
+      if (event.key !== "Enter" && event.key !== " ") {
+        return;
+      }
+
+      if (workspace.classList.contains("is-blank")) {
+        event.preventDefault();
+        setMakingBlank(workspace, canvas, false);
+        return;
+      }
+
+      const piece = event.target.closest(".making-piece");
+      if (!piece) {
+        return;
+      }
+
+      event.preventDefault();
+      setMakingBlank(workspace, canvas, true);
+    });
+  }
+
+  function setMakingBlank(workspace, canvas, showBlank) {
+    workspace.classList.toggle("is-blank", showBlank);
+    canvas.setAttribute("aria-pressed", showBlank ? "true" : "false");
+
+    const blank = canvas.querySelector(".making-blank");
+    if (blank) {
+      blank.tabIndex = showBlank ? 0 : -1;
+      if (showBlank) {
+        blank.focus();
+      }
+    }
+
+    canvas.querySelectorAll(".making-piece").forEach((piece) => {
+      piece.setAttribute(
+        "aria-label",
+        showBlank
+          ? "Reality. Click to show the Making collage."
+          : "Expectation. Click to show reality."
       );
     });
   }

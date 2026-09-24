@@ -3744,6 +3744,40 @@ footer div {
   min-height: 0;
   margin: 0;
   filter: drop-shadow(0 5px 7px rgba(48, 22, 28, .12));
+  cursor: pointer;
+}
+
+.making-blank {
+  display: none;
+  margin: 0;
+  color: #2a0f16;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: clamp(22px, 3.6vw, 48px);
+  font-weight: 800;
+  letter-spacing: -.035em;
+  line-height: 1.2;
+  text-align: center;
+  max-width: 16em;
+  cursor: pointer;
+}
+
+.collage-workspace-making.is-blank .making-collage {
+  background: #cbc9ca;
+  border-color: rgba(116, 9, 36, .12);
+  cursor: pointer;
+}
+
+.collage-workspace-making.is-blank .making-piece,
+.collage-workspace-making.is-blank .collage-note {
+  display: none;
+}
+
+.collage-workspace-making.is-blank .making-blank {
+  display: block;
+  grid-column: 1 / -1;
+  grid-row: 1 / -1;
+  z-index: 20;
+  place-self: center;
 }
 
 .making-piece .piece-image {
@@ -3958,6 +3992,18 @@ footer div {
 
   .making-collage .collage-note span {
     display: none;
+  }
+
+  .collage-workspace-making.is-blank .making-collage {
+    min-height: 70vw;
+    grid-auto-rows: minmax(40vw, 1fr);
+  }
+
+  .collage-workspace-making.is-blank .making-blank {
+    grid-column: 1 / -1;
+    grid-row: 1 / 3;
+    font-size: clamp(20px, 6.4vw, 34px);
+    padding: 24px;
   }
 }
 
