@@ -2391,7 +2391,8 @@ footer div {
 }
 
 .pin-cluster.is-reality .appearance-piece:not(.piece-reality),
-.pin-cluster.is-reality .living-piece:not(.piece-reality) {
+.pin-cluster.is-reality .living-piece:not(.piece-reality),
+.pin-cluster.is-reality .collage-note {
   visibility: hidden;
   pointer-events: none;
 }
@@ -2737,7 +2738,8 @@ footer div {
   }
 
   .pin-cluster.is-reality .appearance-piece:not(.piece-reality),
-  .pin-cluster.is-reality .living-piece:not(.piece-reality) {
+  .pin-cluster.is-reality .living-piece:not(.piece-reality),
+  .pin-cluster.is-reality .collage-note {
     display: none;
     visibility: visible;
   }
