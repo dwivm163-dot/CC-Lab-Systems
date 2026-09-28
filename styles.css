@@ -3109,6 +3109,11 @@ footer div {
   grid-row: 4 / 7;
 }
 
+.living-collage .piece-reality-morning-run {
+  grid-column: 7 / 9;
+  grid-row: 2 / 4;
+}
+
 .living-mark {
   grid-column: 10 / 11;
   grid-row: 2 / 3;
@@ -3213,12 +3218,6 @@ footer div {
   grid-row: 2 / 4;
   z-index: 4;
   transform: translate(6%, 2%) scale(.9);
-}
-
-.living-collage .piece-travel {
-  grid-column: 5 / 7;
-  grid-row: 4 / 6;
-  transform: translate(-2%, 10%) scale(.88);
 }
 
 .living-collage .piece-concert {
@@ -3382,6 +3381,19 @@ footer div {
   bottom: auto;
 }
 
+.living-collage .note-never-early {
+  grid-column: 5 / 7;
+  grid-row: 4 / 5;
+  transform: translate(6%, 8%) rotate(-3deg);
+}
+
+.living-collage .note-never-early span {
+  right: -1.1em;
+  top: -0.2em;
+  left: auto;
+  bottom: auto;
+}
+
 @media (max-width: 700px) {
   .collage-workspace-living {
     background:
@@ -3529,6 +3541,15 @@ footer div {
     grid-row: 33 / 52;
   }
 
+  .living-collage .piece-reality-morning-run {
+    grid-column: 66 / 81;
+    grid-row: 16 / 34;
+  }
+
+  .living-collage .piece-reality-morning-run .piece-image {
+    object-fit: cover;
+  }
+
   .living-collage .piece-jewelry-drawer {
     grid-column: 45 / 52;
     grid-row: 7 / 20;
@@ -3569,12 +3590,6 @@ footer div {
     grid-column: 79 / 97;
     grid-row: 15 / 32;
     z-index: 4;
-  }
-
-  .living-collage .piece-travel {
-    grid-column: 50 / 67;
-    grid-row: 36 / 48;
-    z-index: 7;
   }
 
   .living-collage .piece-concert {
@@ -3767,6 +3782,21 @@ footer div {
   .living-collage .note-academic-victim span {
     right: -1.15em;
     top: .2em;
+    left: auto;
+    bottom: auto;
+  }
+
+  .living-collage .note-never-early {
+    grid-column: 48 / 62;
+    grid-row: 36 / 46;
+    align-self: start;
+    justify-self: end;
+    z-index: 13;
+  }
+
+  .living-collage .note-never-early span {
+    right: -1.05em;
+    top: -0.85em;
     left: auto;
     bottom: auto;
   }
