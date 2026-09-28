@@ -3114,6 +3114,11 @@ footer div {
   grid-row: 2 / 4;
 }
 
+.living-collage .piece-reality-drivers-license {
+  grid-column: 8 / 10;
+  grid-row: 2 / 4;
+}
+
 .living-mark {
   grid-column: 10 / 11;
   grid-row: 2 / 3;
@@ -3547,6 +3552,15 @@ footer div {
   }
 
   .living-collage .piece-reality-morning-run .piece-image {
+    object-fit: cover;
+  }
+
+  .living-collage .piece-reality-drivers-license {
+    grid-column: 79 / 97;
+    grid-row: 15 / 32;
+  }
+
+  .living-collage .piece-reality-drivers-license .piece-image {
     object-fit: cover;
   }
 
