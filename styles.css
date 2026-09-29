@@ -3119,6 +3119,11 @@ footer div {
   grid-row: 2 / 4;
 }
 
+.living-collage .piece-reality-concert {
+  grid-column: 7 / 9;
+  grid-row: 5 / 7;
+}
+
 .living-mark {
   grid-column: 10 / 11;
   grid-row: 2 / 3;
@@ -3399,6 +3404,17 @@ footer div {
   bottom: auto;
 }
 
+.living-collage .note-one-concert {
+  grid-column: 7 / 9;
+  grid-row: 4 / 5;
+  transform: translate(8%, 8%) rotate(-2deg);
+}
+
+.living-collage .note-one-concert span {
+  left: 40%;
+  bottom: -130%;
+}
+
 @media (max-width: 700px) {
   .collage-workspace-living {
     background:
@@ -3561,6 +3577,15 @@ footer div {
   }
 
   .living-collage .piece-reality-drivers-license .piece-image {
+    object-fit: cover;
+  }
+
+  .living-collage .piece-reality-concert {
+    grid-column: 66 / 85;
+    grid-row: 43 / 58;
+  }
+
+  .living-collage .piece-reality-concert .piece-image {
     object-fit: cover;
   }
 
@@ -3813,6 +3838,21 @@ footer div {
     top: -0.85em;
     left: auto;
     bottom: auto;
+  }
+
+  .living-collage .note-one-concert {
+    grid-column: 64 / 85;
+    grid-row: 36 / 42;
+    align-self: center;
+    justify-self: start;
+    z-index: 13;
+  }
+
+  .living-collage .note-one-concert span {
+    left: 1.4em;
+    bottom: -1.05em;
+    right: auto;
+    top: auto;
   }
 
   .living-collage .living-mark {
